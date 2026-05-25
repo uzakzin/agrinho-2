@@ -1,0 +1,414 @@
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* =========================================================
+   RESET
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+:root {
+    --verde-principal: #2e8b57;
+    --verde-secundario: #3cb371;
+    --verde-claro: #a8e6cf;
+    --verde-escuro: #1f5133;
+
+    --branco: #ffffff;
+    --off-white: #f4f8f6;
+    --cinza-claro: #dfe9e4;
+    --texto: #2f3e36;
+
+    --sombra-suave: 0 8px 20px rgba(0, 0, 0, 0.08);
+    --transicao: all 0.3s ease;
+
+    --radius: 18px;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--off-white);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* =========================================================
+   LINKS E BOTÕES
+========================================================= */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        rgba(46, 139, 87, 0.95),
+        rgba(60, 179, 113, 0.9)
+    );
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+.navbar {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: #d8ffe8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: var(--transicao);
+}
+
+.nav-links a:hover {
+    color: #d8ffe8;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 8%;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+/* =========================================================
+   BOTÃO HERO
+========================================================= */
+.btn-hero {
+    display: inline-block;
+    background-color: var(--branco);
+    color: var(--verde-principal);
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transicao);
+    box-shadow: var(--sombra-suave);
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+    background-color: #eafff1;
+}
+
+/* =========================================================
+   SEÇÕES GERAIS
+========================================================= */
+section {
+    padding: 100px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #5f6f66;
+    font-size: 1rem;
+}
+
+/* =========================================================
+   PILARES
+========================================================= */
+.pilares-section {
+    background-color: var(--off-white);
+}
+
+/* GRID DOS CARDS */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.card-pilar {
+    background-color: var(--branco);
+    padding: 35px;
+    border-radius: var(--radius);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    transition: var(--transicao);
+}
+
+.card-pilar:hover {
+    transform: translateY(-8px);
+}
+
+/* ÍCONE */
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--verde-claro);
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-icon i {
+    font-size: 2rem;
+    color: var(--verde-escuro);
+}
+
+/* TEXTO CARD */
+.card-pilar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--verde-escuro);
+}
+
+.card-pilar p {
+    color: #5d6b63;
+    font-size: 0.98rem;
+}
+
+/* =========================================================
+   GAMIFICAÇÃO
+========================================================= */
+.gamificacao-section {
+    background-color: #eef7f2;
+}
+
+/* CONTAINER */
+.calculadora-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--branco);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--sombra-suave);
+}
+
+/* FORMULÁRIO */
+.form-ecologico {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CAMPOS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--verde-escuro);
+}
+
+/* SELECT */
+.form-group select {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid var(--cinza-claro);
+    background-color: #fafafa;
+    font-size: 1rem;
+    transition: var(--transicao);
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.15);
+}
+
+/* BOTÃO CALCULAR */
+.btn-calcular {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.btn-calcular:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+/* RESULTADO */
+.resultado-diagnostico {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 14px;
+    background-color: #f7fcf9;
+    border: 2px dashed var(--verde-claro);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--verde-escuro);
+    font-weight: 500;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    opacity: 0.95;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+/* TABLETS */
+@media (max-width: 992px) {
+
+    .hero-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* CELULARES */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* HERO */
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* CARDS */
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* FORM */
+    .calculadora-container {
+        padding: 30px 20px;
+    }
+
+    /* TITULOS */
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+/* TELAS MUITO PEQUENAS */
+@media (max-width: 480px) {
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-hero {
+        padding: 12px 28px;
+    }
+
+    section {
+        padding: 70px 6%;
+    }
+}
